@@ -22,7 +22,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         supportRequestWindowFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
-        setContentView(initView());
+        initView();
         // 系统状态栏透明
         if (Build.VERSION.SDK_INT >= 21){
             View decorView = getWindow().getDecorView();
@@ -38,7 +38,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         initHttp();
     }
 
-    public abstract int initView();
+    public abstract void initView();
 
     public abstract void initHttp();
 

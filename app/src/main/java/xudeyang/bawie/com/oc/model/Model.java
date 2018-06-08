@@ -5,4 +5,5 @@ package xudeyang.bawie.com.oc.model;
  */
 
 public class Model {
+    //
 }

@@ -9,8 +9,7 @@ import xudeyang.bawie.com.oc.view.base.BaseActivity;
 public class LoginActivity extends BaseActivity {
 
     @Override
-    public void initView() {
-        setContentView(R.layout.activity_login);
+    public int  initView() {
         ActivityCompat.requestPermissions(LoginActivity.this, new String[]{
                 Manifest.permission.CAMERA,
                 Manifest.permission.READ_PHONE_STATE,
@@ -18,6 +17,7 @@ public class LoginActivity extends BaseActivity {
                 Manifest.permission.READ_SMS,
                 Manifest.permission.READ_CONTACTS,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+        return R.layout.activity_login;
     }
 
     @Override

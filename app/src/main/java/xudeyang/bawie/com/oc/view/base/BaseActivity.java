@@ -22,6 +22,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         supportRequestWindowFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
+        setContentView(initView());
         // 系统状态栏透明
         if (Build.VERSION.SDK_INT >= 21){
             View decorView = getWindow().getDecorView();
@@ -32,12 +33,12 @@ public abstract class BaseActivity extends AppCompatActivity {
             getWindow().setNavigationBarColor(Color.TRANSPARENT);
             getWindow().setStatusBarColor(Color.parseColor("#03A9F4"));
         }
-        initView();
+
         initData();
         initHttp();
     }
 
-    public abstract void initView();
+    public abstract int initView();
 
     public abstract void initHttp();
 

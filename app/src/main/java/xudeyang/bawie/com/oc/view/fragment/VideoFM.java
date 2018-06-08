@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import xudeyang.bawie.com.oc.R;
@@ -14,7 +15,6 @@ import xudeyang.bawie.com.oc.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link VideoFM.OnFragmentInteractionListener} interface
  * to handle interaction events.
  * Use the {@link VideoFM#newInstance} factory method to
  * create an instance of this fragment.
@@ -69,6 +69,17 @@ public class VideoFM extends Fragment {
         inflate = inflater.inflate(R.layout.fragment_video_fm, container, false);
         TextView textView = inflate.findViewById(R.id.container1);
         textView.setText(mParam1);
+        init();
         return inflate;
+    }
+
+    private void init() {
+        Button btn = inflate.findViewById(R.id.button2);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }

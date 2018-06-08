@@ -1,9 +1,7 @@
-package xudeyang.bawie.com.oc.view.activity;
+package xudeyang.bawie.com.oc.login;
 
 import android.Manifest;
 import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import xudeyang.bawie.com.oc.R;
 import xudeyang.bawie.com.oc.view.base.BaseActivity;

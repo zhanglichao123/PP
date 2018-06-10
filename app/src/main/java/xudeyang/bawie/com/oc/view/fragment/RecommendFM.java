@@ -15,7 +15,7 @@ import android.widget.TextView;
 import java.lang.reflect.Field;
 
 import xudeyang.bawie.com.oc.R;
-import xudeyang.bawie.com.oc.view.recommend.MyFragmentPagerAdapter;
+import xudeyang.bawie.com.oc.view.recommend.hot.hotadapter.MyFragmentPagerAdapter;
 
 
 public class RecommendFM extends Fragment {

@@ -7,4 +7,8 @@
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_150"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/hot_rlv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>

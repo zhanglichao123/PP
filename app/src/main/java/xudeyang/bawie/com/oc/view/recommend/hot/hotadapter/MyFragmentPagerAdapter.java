@@ -1,8 +1,11 @@
-package xudeyang.bawie.com.oc.view.recommend;
+package xudeyang.bawie.com.oc.view.recommend.hot.hotadapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import xudeyang.bawie.com.oc.view.recommend.hot.hotfragment.AttentionFragment;
+import xudeyang.bawie.com.oc.view.recommend.hot.hotfragment.HotFragment;
 
 public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 

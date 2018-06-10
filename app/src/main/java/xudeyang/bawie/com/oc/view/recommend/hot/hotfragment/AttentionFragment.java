@@ -1,4 +1,4 @@
-package xudeyang.bawie.com.oc.view.recommend;
+package xudeyang.bawie.com.oc.view.recommend.hot.hotfragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

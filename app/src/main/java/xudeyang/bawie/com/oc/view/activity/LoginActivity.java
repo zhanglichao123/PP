@@ -1,15 +1,17 @@
 package xudeyang.bawie.com.oc.view.activity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.TextView;
 
 import xudeyang.bawie.com.oc.R;
+import xudeyang.bawie.com.oc.login.ElseLoginActivity;
 import xudeyang.bawie.com.oc.utils.TitleBar;
 import xudeyang.bawie.com.oc.view.base.BaseActivity;
 
-public class LoginActivity extends BaseActivity implements View.OnClickListener{
+public class LoginActivity extends BaseActivity implements View.OnClickListener {
 
 
     TitleBar titlebarLoginlogin;
@@ -34,17 +36,20 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
     @Override
     public void initHttp() {
 
-         titlebarLoginlogin = findViewById(R.id.titlebar_loginlogin);
-         qq = findViewById(R.id.qq_login);
-         weixin = findViewById(R.id.weixin_long);
-         elsel = findViewById(R.id.else_login);
-         qq.setOnClickListener( this);
-         titlebarLoginlogin = findViewById(R.id.titlebar_loginlogin);
-         //返回
-         titlebarLoginlogin.setBack(this);
-         //设置右边的字
-         text = titlebarLoginlogin.getText();
-         text.setVisibility(View.GONE);
+        titlebarLoginlogin = findViewById(R.id.titlebar_loginlogin);
+        qq = findViewById(R.id.qq_login);
+        weixin = findViewById(R.id.weixin_long);
+        elsel = findViewById(R.id.else_login);
+
+        qq.setOnClickListener(this);
+        weixin.setOnClickListener(this);
+        elsel.setOnClickListener(this);
+        titlebarLoginlogin = findViewById(R.id.titlebar_loginlogin);
+        //返回
+        titlebarLoginlogin.setBack(this);
+        //设置右边的字
+        text = titlebarLoginlogin.getText();
+        text.setVisibility(View.GONE);
 
     }
 
@@ -56,13 +61,15 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-                case R.id.qq_login:
+        switch (v.getId()) {
+            case R.id.qq_login:
                 break;
-                case R.id.weixin_long:
+            case R.id.weixin_long:
                 break;
-                case R.id.else_login:
-
+            case R.id.else_login:
+                Intent intent=new Intent(this,ElseLoginActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.init_fo,R.anim.out_to);
                 break;
         }
     }

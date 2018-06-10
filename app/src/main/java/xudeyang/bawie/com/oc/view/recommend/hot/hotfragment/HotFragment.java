@@ -35,6 +35,7 @@ public class HotFragment extends Fragment {
             "https://www.zhaoapi.cn/images/quarter/ad2.png",
             "https://www.zhaoapi.cn/images/quarter/ad3.png",
             "https://www.zhaoapi.cn/images/quarter/ad4.png"
+
     );
     @Nullable
     @Override

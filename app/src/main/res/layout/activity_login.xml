@@ -11,4 +11,46 @@
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
      android:layout_marginTop="@dimen/dp_20"></xudeyang.bawie.com.oc.utils.TitleBar>
+    <ImageView
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="@dimen/dp_70"
+        android:src="@mipmap/ll"
+        />
+    <TextView
+        android:id="@+id/qq_login"
+        android:paddingLeft="@dimen/dp_70"
+        android:gravity="center_vertical"
+        android:text="QQ登录"
+        android:drawableLeft="@mipmap/qq"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_230"
+        android:background="@drawable/qq_background"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_40"
+        android:textColor="#ffffff"
+        />
+      <TextView
+          android:id="@+id/weixin_long"
+          android:paddingLeft="@dimen/dp_70"
+          android:gravity="center_vertical"
+          android:text="微信登入"
+          android:drawableLeft="@mipmap/weixin"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginTop="@dimen/dp_10"
+          android:background="@drawable/weixin_background"
+          android:layout_width="@dimen/dp_200"
+          android:layout_height="@dimen/dp_40"
+          android:textColor="#ffffff"
+          />
+    <TextView
+        android:id="@+id/else_login"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:text="其他登入方式"
+        />
 </LinearLayout>

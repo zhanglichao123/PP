@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:orientation="vertical"
@@ -28,7 +29,7 @@
                 android:id="@+id/hot_item_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1234"
+                android:text="天蝎喝牛奶"
                 android:textColor="#ff0404" />
 
             <TextView
@@ -36,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="6dp"
-                android:text="撒大声地"
+                android:text="00000"
                 android:textSize="8sp" />
         </LinearLayout>
 
@@ -125,17 +126,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="#ccff11"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/hot_item_title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="23dp"
+            android:textStyle="bold"
             android:layout_marginTop="5dp"
             android:layout_weight="5"
-            android:text="实打实实打实大师大师"
+            android:textSize="@dimen/sp_18"
+            android:text="努力加载中。。。"
             android:textColor="#000" />
 
         <RelativeLayout
@@ -146,72 +148,102 @@
             <ImageView
                 android:id="@+id/img_02"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#ffcc11" />
+                android:layout_height="match_parent" />
 
             <LinearLayout
                 android:id="@+id/linearlayout_cemian"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
-                android:background="#22ccff"
                 android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <LinearLayout
+                    android:padding="@dimen/dp_3"
                     android:layout_weight="1"
-                    android:src="@mipmap/ic_launcher" />
-
-                <TextView
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="1213"
-                    android:textSize="10sp" />
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/hot_item_a1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/hot_a1" />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@mipmap/ic_launcher" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="1563"
+                        android:textSize="10sp" />
+                </LinearLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <LinearLayout
+                    android:padding="@dimen/dp_3"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="1213"
-                    android:textSize="10sp" />
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/hot_item_a2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/hot_a2" />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="655"
+                        android:textSize="10sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:padding="@dimen/dp_3"
                     android:layout_weight="1"
-                    android:src="@mipmap/ic_launcher" />
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/hot_item_a3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/hot03" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="1213"
-                    android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="503"
+                        android:textSize="10sp" />
+                </LinearLayout>
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <LinearLayout
+                    android:padding="@dimen/dp_3"
                     android:layout_weight="1"
-                    android:src="@mipmap/ic_launcher" />
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/hot_item_a4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/hot04" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="1213"
-                    android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="1.1万"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+
 
             </LinearLayout>
         </RelativeLayout>
@@ -223,7 +255,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="3"
-        android:background="#00ffcc"
+        android:background="@drawable/pl"
         android:orientation="vertical">
 
         <LinearLayout
@@ -234,6 +266,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textSize="@dimen/sp_14"
                 android:id="@+id/hot_item_pl1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -242,9 +275,12 @@
                 android:textColor="#009dff" />
 
             <TextView
+                android:layout_marginLeft="@dimen/dp_10"
                 android:id="@+id/hot_item_pl01"
                 android:layout_width="wrap_content"
+                android:textSize="@dimen/sp_12"
                 android:layout_height="wrap_content"
+                android:textColor="#000"
                 android:gravity="center"
                 android:text="大大大撒" />
         </LinearLayout>
@@ -256,6 +292,7 @@
             android:layout_weight="1">
 
             <TextView
+                android:textSize="@dimen/sp_14"
                 android:id="@+id/hot_item_pl2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -264,6 +301,9 @@
                 android:textColor="#009dff" />
 
             <TextView
+                android:textSize="@dimen/sp_12"
+                android:textColor="#000"
+                android:layout_marginLeft="@dimen/dp_10"
                 android:id="@+id/hot_item_pl02"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

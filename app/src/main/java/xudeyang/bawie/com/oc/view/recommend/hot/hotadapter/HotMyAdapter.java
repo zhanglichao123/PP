@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-<<<<<<< Updated upstream
+
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -17,13 +17,9 @@ import java.util.List;
 
 import xudeyang.bawie.com.oc.R;
 import xudeyang.bawie.com.oc.utils.GlideCircleTransform;
-=======
-import android.widget.TextView;
 
-import java.util.List;
 
-import xudeyang.bawie.com.oc.R;
->>>>>>> Stashed changes
+
 import xudeyang.bawie.com.oc.view.recommend.hot.hotbean.RecHotBean;
 
 /**
@@ -33,10 +29,9 @@ import xudeyang.bawie.com.oc.view.recommend.hot.hotbean.RecHotBean;
 public class HotMyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
     private List<RecHotBean.DataBean> list;
-<<<<<<< Updated upstream
+
     private boolean bo = true;
-=======
->>>>>>> Stashed changes
+
 
     public HotMyAdapter(Context context, List<RecHotBean.DataBean> list) {
         this.context = context;
@@ -52,7 +47,7 @@ public class HotMyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-<<<<<<< Updated upstream
+
         final MyViewHolder my = (MyViewHolder) holder;
         Glide.with(context)
                 .load(list.get(position).getCover())
@@ -106,10 +101,10 @@ public class HotMyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
         mLinearlayout.setVisibility(View.GONE);
         mRlv.setVisibility(View.VISIBLE);*/
-=======
-        MyViewHolder my = (MyViewHolder) holder;
 
->>>>>>> Stashed changes
+       // MyViewHolder my = (MyViewHolder) holder;
+
+
     }
 
     @Override
@@ -130,14 +125,13 @@ public class HotMyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         private TextView pl2;
         private TextView pl02;
 
-<<<<<<< Updated upstream
+
         private ImageView a1;
         private ImageView a2;
         private ImageView a3;
         private ImageView a4;
         private LinearLayout lin;
-=======
->>>>>>> Stashed changes
+
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -151,14 +145,12 @@ public class HotMyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             pl01 = itemView.findViewById(R.id.hot_item_pl01);
             pl2 = itemView.findViewById(R.id.hot_item_pl2);
             pl02 = itemView.findViewById(R.id.hot_item_pl02);
-<<<<<<< Updated upstream
+
             a1 = itemView.findViewById(R.id.hot_item_a1);
             a2 = itemView.findViewById(R.id.hot_item_a2);
             a3 = itemView.findViewById(R.id.hot_item_a3);
             a4 = itemView.findViewById(R.id.hot_item_a4);
             lin = itemView.findViewById(R.id.linearlayout_cemian);
-=======
->>>>>>> Stashed changes
 
         }
     }

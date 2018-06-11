@@ -43,7 +43,8 @@ public class TitleBar extends LinearLayout {
              @Override
              public void onClick(View v) {
                  aa.finish();
-             }
+                 aa.overridePendingTransition(R.anim.init_fo_return,R.anim.out_to_return);
+         }
          });
      }
     /**

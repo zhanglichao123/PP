@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="xudeyang.bawie.com.oc">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -31,10 +34,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.activity.MainActivity"></activity>
+        <activity android:name=".view.activity.MainActivity" />
         <activity
             android:name=".view.activity.SplashActivity"
-            android:theme="@style/SplashTheme"></activity>
+            android:theme="@style/SplashTheme" />
         <activity android:name=".view.activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,7 +45,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".login.ElseLoginActivity"></activity>
+        <activity android:name=".login.ElseLoginActivity" />
+        <activity android:name=".login.RegisterActivity" />
+        <activity android:name=".login.PassActivity"></activity>
     </application>
 
 </manifest>

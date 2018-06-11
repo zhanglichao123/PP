@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout
+    android:id="@+id/hot_zong"
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="#fff"
     android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -119,7 +121,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
-            android:src="@drawable/show" />
+            android:src="@drawable/hot_a3" />
     </RelativeLayout>
 
     <LinearLayout
@@ -170,6 +172,7 @@
                         android:src="@drawable/hot_a1" />
 
                     <TextView
+                        android:id="@+id/hot_item_num01"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="2"
@@ -192,6 +195,7 @@
                         android:src="@drawable/hot_a2" />
 
                     <TextView
+                        android:id="@+id/hot_item_num02"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="2"

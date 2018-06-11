@@ -1,15 +1,23 @@
 package xudeyang.bawie.com.oc.login;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-
 import xudeyang.bawie.com.oc.R;
+import xudeyang.bawie.com.oc.view.base.BaseActivity;
 
-public class ElseLoginActivity extends AppCompatActivity {
+public class ElseLoginActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void initView() {
         setContentView(R.layout.activity_else_login);
+    }
+
+    @Override
+    public void initHttp() {
+
+    }
+
+    @Override
+    public void initData() {
+
+
     }
 }

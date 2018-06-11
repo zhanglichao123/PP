@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:orientation="vertical"
@@ -29,7 +32,11 @@
                 android:id="@+id/hot_item_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+<<<<<<< Updated upstream
                 android:text="天蝎喝牛奶"
+=======
+                android:text="1234"
+>>>>>>> Stashed changes
                 android:textColor="#ff0404" />
 
             <TextView
@@ -37,7 +44,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="6dp"
+<<<<<<< Updated upstream
                 android:text="00000"
+=======
+                android:text="撒大声地"
+>>>>>>> Stashed changes
                 android:textSize="8sp" />
         </LinearLayout>
 
@@ -126,18 +137,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+<<<<<<< Updated upstream
+=======
+        android:background="#ccff11"
+>>>>>>> Stashed changes
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/hot_item_title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+<<<<<<< Updated upstream
             android:layout_marginLeft="23dp"
             android:textStyle="bold"
             android:layout_marginTop="5dp"
             android:layout_weight="5"
             android:textSize="@dimen/sp_18"
             android:text="努力加载中。。。"
+=======
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="5"
+            android:text="实打实实打实大师大师"
+>>>>>>> Stashed changes
             android:textColor="#000" />
 
         <RelativeLayout
@@ -148,13 +170,19 @@
             <ImageView
                 android:id="@+id/img_02"
                 android:layout_width="match_parent"
+<<<<<<< Updated upstream
                 android:layout_height="match_parent" />
+=======
+                android:layout_height="match_parent"
+                android:background="#ffcc11" />
+>>>>>>> Stashed changes
 
             <LinearLayout
                 android:id="@+id/linearlayout_cemian"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
+<<<<<<< Updated upstream
                 android:orientation="vertical">
                 <LinearLayout
                     android:padding="@dimen/dp_3"
@@ -244,6 +272,66 @@
                 </LinearLayout>
 
 
+=======
+                android:background="#22ccff"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1213"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1213"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1213"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1213"
+                    android:textSize="10sp" />
+>>>>>>> Stashed changes
 
             </LinearLayout>
         </RelativeLayout>
@@ -255,7 +343,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="3"
+<<<<<<< Updated upstream
         android:background="@drawable/pl"
+=======
+        android:background="#00ffcc"
+>>>>>>> Stashed changes
         android:orientation="vertical">
 
         <LinearLayout
@@ -266,7 +358,10 @@
             android:orientation="horizontal">
 
             <TextView
+<<<<<<< Updated upstream
                 android:textSize="@dimen/sp_14"
+=======
+>>>>>>> Stashed changes
                 android:id="@+id/hot_item_pl1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -275,12 +370,18 @@
                 android:textColor="#009dff" />
 
             <TextView
+<<<<<<< Updated upstream
                 android:layout_marginLeft="@dimen/dp_10"
                 android:id="@+id/hot_item_pl01"
                 android:layout_width="wrap_content"
                 android:textSize="@dimen/sp_12"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
+=======
+                android:id="@+id/hot_item_pl01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+>>>>>>> Stashed changes
                 android:gravity="center"
                 android:text="大大大撒" />
         </LinearLayout>
@@ -292,7 +393,10 @@
             android:layout_weight="1">
 
             <TextView
+<<<<<<< Updated upstream
                 android:textSize="@dimen/sp_14"
+=======
+>>>>>>> Stashed changes
                 android:id="@+id/hot_item_pl2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -301,9 +405,12 @@
                 android:textColor="#009dff" />
 
             <TextView
+<<<<<<< Updated upstream
                 android:textSize="@dimen/sp_12"
                 android:textColor="#000"
                 android:layout_marginLeft="@dimen/dp_10"
+=======
+>>>>>>> Stashed changes
                 android:id="@+id/hot_item_pl02"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

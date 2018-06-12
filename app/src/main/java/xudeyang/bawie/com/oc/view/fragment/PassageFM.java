@@ -1,20 +1,26 @@
 package xudeyang.bawie.com.oc.view.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.yixia.camera.util.Log;
 
 import xudeyang.bawie.com.oc.R;
+import xudeyang.bawie.com.oc.view.activity.ZKCreationActivity;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link PassageFM.OnFragmentInteractionListener} interface
+ *
  * to handle interaction events.
  * Use the {@link PassageFM#newInstance} factory method to
  * create an instance of this fragment.
@@ -68,7 +74,18 @@ public class PassageFM extends Fragment {
         // Inflate the layout for this fragment
         inflate = inflater.inflate(R.layout.fragment_passage_fm, container, false);
         TextView textView = inflate.findViewById(R.id.container1);
+        ImageView mycreation=inflate.findViewById(R.id.mycreation);
         textView.setText(mParam1);
+
+
+        mycreation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), ZKCreationActivity.class);
+                startActivity(intent);
+            }
+        });
+
         return inflate;
     }
 

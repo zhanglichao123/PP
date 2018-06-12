@@ -31,10 +31,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.activity.MainActivity">
-
-        </activity>
-        <activity android:name=".view.activity.SplashActivity"
+        <activity android:name=".view.activity.MainActivity" />
+        <activity
+            android:name=".view.activity.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,10 +41,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.activity.LoginActivity">
-
-
-        </activity>
+        <activity android:name=".view.activity.LoginActivity" />
+        <activity android:name=".view.activity.ZKCreationActivity" />
+        <activity android:name=".view.activity.ZkVideoActivity" />
+        <activity android:name=".view.activity.Cross_talkActivity" />
+        <activity android:name=".view.activity.BrowseActivity"></activity>
     </application>
 
 </manifest>

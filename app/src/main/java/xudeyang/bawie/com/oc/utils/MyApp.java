@@ -2,6 +2,7 @@ package xudeyang.bawie.com.oc.utils;
 
 import android.app.Application;
 
+import com.mob.MobSDK;
 import com.orhanobut.hawk.Hawk;
 
 import skin.support.SkinCompatManager;
@@ -19,6 +20,7 @@ public class MyApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        MobSDK.init(this);
         Hawk.init(this).build();
         //换皮肤
         SkinCompatManager.withoutActivity(this)                         // Basic Widget support

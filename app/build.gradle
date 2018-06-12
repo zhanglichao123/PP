@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
-
+// 添加插件
+apply plugin: 'com.mob.sdk'
 android {
 
     compileSdkVersion 27
@@ -67,4 +68,10 @@ dependencies {
         }
     }
 
+}
+MobSDK {
+    appKey "2434d429d4705"
+    appSecret "27e78b41178709cf5a659932a3be7289"
+
+    SMSSDK {}
 }

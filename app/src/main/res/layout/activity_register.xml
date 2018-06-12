@@ -63,7 +63,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/dp_15"
         android:background="@drawable/login_background"
-        android:text="登录"
+        android:text="注册"
         android:textColor="#ffffff" />
 
     <TextView

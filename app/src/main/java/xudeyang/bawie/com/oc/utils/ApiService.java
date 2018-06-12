@@ -9,6 +9,7 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 import xudeyang.bawie.com.oc.login.bean.LoginBean;
+import xudeyang.bawie.com.oc.login.bean.RegisterBean;
 import xudeyang.bawie.com.oc.view.recommend.hot.hotbean.RecHotBean;
 
 /**
@@ -20,9 +21,20 @@ public interface ApiService {
     //https://www.zhaoapi.cn/quarter/getHotVideos?source=android&appVersion=1&token=F8EB129296C90580807D0C6D9FD9B7F7&page=1
     @GET("quarter/getHotVideos")
     Flowable<RecHotBean> rechot(@Query("token") String token, @Query("page") String page);
+
     //登录
     @POST("user/login")
     @FormUrlEncoded
-    Flowable<LoginBean> getLogin(@FieldMap Map<String,String>map);
+    Flowable<LoginBean> getLogin(@FieldMap Map<String, String> map);
+
+    //注册
+    @POST("quarter/register")
+    @FormUrlEncoded
+    Flowable<RegisterBean> getRegister(@FieldMap Map<String, String> map);
+
+    //忘记
+    @POST("quarter/getPass")
+    @FormUrlEncoded
+    Flowable<RegisterBean> getPass(@FieldMap Map<String, String> map);
 
 }

@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/login"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    android:background="@mipmap/pugonying"
+    tools:context=".login.ForgetActivity">
     <xudeyang.bawie.com.oc.utils.TitleBar
-        android:id="@+id/pass_title"
+        android:id="@+id/forget_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_20"></xudeyang.bawie.com.oc.utils.TitleBar>
@@ -21,70 +21,55 @@
         android:src="@mipmap/ll" />
 
     <LinearLayout
-        android:layout_width="@dimen/dp_300"
+        android:layout_width="@dimen/dp_200"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/dp_30"
         android:background="@drawable/edittext_backgraound"
         android:orientation="vertical">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/mobile_pass"
-                style="?android:attr/textViewStyle"
-                android:layout_width="@dimen/dp_300"
-                android:layout_height="@dimen/dp_40"
-                android:layout_gravity="center_horizontal"
-                android:background="@null"
-                android:hint="86+ | 输入手机号"
-                android:paddingLeft="@dimen/dp_15"
-                android:textColor="#ede9e9" />
-
-            <TextView
-                android:id="@+id/verificatio_pass"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="@dimen/dp_10"
-                android:textColor="#2323d8"
-                android:text="获得验证码" />
-        </RelativeLayout>
+        <EditText
+            android:id="@+id/pwd_forget"
+            style="?android:attr/textViewStyle"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center_horizontal"
+            android:background="@null"
+            android:hint="输入大小写字母，数字不能超过8位"
+            android:paddingLeft="@dimen/dp_15"
+            android:textColor="#ede9e9" />
 
         <View
-            android:layout_width="@dimen/dp_300"
+            android:layout_width="@dimen/dp_200"
             android:layout_height="@dimen/dp_1"
             android:layout_gravity="center_horizontal"
             android:background="#ff0000" />
 
         <EditText
-            android:id="@+id/pwd_pass"
+            android:id="@+id/confirm_pwd_forget"
             style="?android:attr/textViewStyle"
-            android:layout_width="@dimen/dp_300"
+            android:layout_width="@dimen/dp_200"
             android:layout_height="@dimen/dp_40"
             android:layout_gravity="center_horizontal"
             android:background="@null"
-            android:hint="输入验证码"
+            android:hint="输入密码"
             android:paddingLeft="@dimen/dp_15"
             android:textColor="#ede9e9" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/login_pass"
+        android:id="@+id/login_forget"
         android:layout_width="@dimen/dp_200"
         android:layout_height="@dimen/dp_50"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/dp_15"
         android:background="@drawable/login_background"
-        android:text="下一步"
+        android:text="完成"
         android:textColor="#ffffff" />
 
 
     <TextView
-        android:id="@+id/visitors_pass"
+        android:id="@+id/visitors_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_15"
@@ -92,5 +77,4 @@
         android:text="游客登录"
         android:textColor="#ffffff"
         android:textSize="@dimen/dp_20" />
-
 </LinearLayout>

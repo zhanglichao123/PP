@@ -14,6 +14,7 @@ import java.util.regex.Pattern;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.reactivex.Flowable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subscribers.DisposableSubscriber;
@@ -24,98 +25,104 @@ import xudeyang.bawie.com.oc.utils.TitleBar;
 import xudeyang.bawie.com.oc.view.activity.MainActivity;
 import xudeyang.bawie.com.oc.view.base.BaseActivity;
 
-public class RegisterActivity extends BaseActivity {
+public class ForgetActivity extends BaseActivity {
 
-
-    @BindView(R.id.register_title)
-    TitleBar registerTitle;
-    @BindView(R.id.mobile_register)
-    EditText mobileRegister;
-    @BindView(R.id.pwd_register)
-    EditText pwdRegister;
-    @BindView(R.id.login_register)
-    Button loginRegister;
-    @BindView(R.id.visitors_register)
-    TextView visitorsRegister;
+    @BindView(R.id.forget_title)
+    TitleBar forgetTitle;
+    @BindView(R.id.pwd_forget)
+    EditText pwdForget;
+    @BindView(R.id.confirm_pwd_forget)
+    EditText confirmPwdForget;
+    @BindView(R.id.login_forget)
+    Button loginForget;
+    @BindView(R.id.visitors_login)
+    TextView visitorsLogin;
     private TextView text;
+    private String phone;
+    private Flowable<RegisterBean> pass;
+
 
     @Override
     public void initView() {
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_forget);
         ButterKnife.bind(this);
+
+        Intent intent = getIntent();
+        phone = intent.getStringExtra("phone");
+
     }
 
     @Override
     public void initHttp() {
-
-    }
-
-    @Override
-    public void initData() {
         //返回
-        registerTitle.setBack(this);
-        text = registerTitle.getText();
+        forgetTitle.setBack(this);
+        text = forgetTitle.getText();
         text.setText("已有账号");
-        //跳转到登录页面
+        //调到登录页面
         text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegisterActivity.this, ElseLoginActivity.class);
+                Intent intent = new Intent(ForgetActivity.this, ElseLoginActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.init_fo_return, R.anim.out_to_return);
+                finish();
             }
         });
     }
 
+    @Override
+    public void initData() {
 
-    @OnClick({R.id.login_register, R.id.visitors_register})
+    }
+
+    @OnClick({R.id.login_forget, R.id.visitors_login})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.login_register:
-                String mobile = mobileRegister.getText().toString();
-                String pwd = pwdRegister.getText().toString();
-                boolean verification = verification(mobile, pwd);
+            case R.id.login_forget://修改密码
+                String pwd = pwdForget.getText().toString();
+                String confirmPwd = confirmPwdForget.getText().toString();
+                boolean verification = verification(phone, pwd, confirmPwd);
                 if (verification) {
-                    initNetHttp(mobile, pwd);
+                    initNetHttp(phone, pwd);
                 }
                 break;
-            case R.id.visitors_register://游客登入
-                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+            case R.id.visitors_login://
+                Intent intent = new Intent(ForgetActivity.this, MainActivity.class);
                 startActivity(intent);
+                finish();
                 break;
         }
     }
 
     /**
-     * 请求数据
+     * 请求网络
      *
-     * @param mobile
+     * @param phone
      * @param pwd
      */
-    private void initNetHttp(String mobile, String pwd) {
+    private void initNetHttp(String phone, String pwd) {
         HashMap<String, String> map = new HashMap<>();
-        map.put("regType", "0");
-        map.put("mobile", mobile);
-        map.put("password", pwd);
-
-        RetrofitUtil
-                .getInstance().getRegister(map).subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+        map.put("token", "0");
+        map.put("mobile", phone);
+        map.put("newPass", pwd);
+        pass = RetrofitUtil.getInstance().getPass(map);
+        pass.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new DisposableSubscriber<RegisterBean>() {
                     @Override
                     public void onNext(RegisterBean registerBean) {
-                        Toast.makeText(RegisterActivity.this, registerBean.getMsg(), Toast.LENGTH_SHORT).show();
-                        if (registerBean.getCode().equals("0")) {
-                            //成功跳转到登录页面
-                            Intent intent = new Intent(RegisterActivity.this, ElseLoginActivity.class);
+                        String code = registerBean.getCode();
+                        if (code.equals("0")) {
+                            Toast.makeText(ForgetActivity.this, "修改成功", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(ForgetActivity.this, ElseLoginActivity.class);
                             startActivity(intent);
-                            overridePendingTransition(R.anim.init_fo_return, R.anim.out_to_return);
+                            overridePendingTransition(R.anim.out_to, R.anim.out_to_forget);
+                            finish();
                         }
                     }
 
                     @Override
                     public void onError(Throwable t) {
-                        Toast.makeText(RegisterActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ForgetActivity.this, "设置失败", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
@@ -123,7 +130,9 @@ public class RegisterActivity extends BaseActivity {
 
                     }
                 });
+
     }
+
 
     /***
      *
@@ -132,7 +141,7 @@ public class RegisterActivity extends BaseActivity {
      * @param pwd
      * @return
      */
-    private boolean verification(String mobile, String pwd) {
+    private boolean verification(String mobile, String pwd, String confirmPwd) {
         //验证手机号
         String regex = "^((13[0-9])|(14[5,7])|(15[0-3,5-9])|(17[0,3,5-8])|(18[0-9])|166|198|199|(147))\\d{8}$";
         Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
@@ -148,6 +157,10 @@ public class RegisterActivity extends BaseActivity {
         Matcher matcher = compile.matcher(pwd);
         boolean matches1 = matcher.matches();
         boolean ff = pwd.length() <= 8 ? true : false;
+        if (!(pwd.equals(confirmPwd))) {
+            Toast.makeText(this, "两次密码不一样", Toast.LENGTH_SHORT).show();
+            return false;
+        }
         if (!ff) {
             Toast.makeText(this, "密码不可超过八位", Toast.LENGTH_SHORT).show();
             return false;
@@ -160,5 +173,11 @@ public class RegisterActivity extends BaseActivity {
             return true;
         }
         return false;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
     }
 }

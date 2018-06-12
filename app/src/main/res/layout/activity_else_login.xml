@@ -3,8 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/login"
-    android:orientation="vertical"
-  >
+    android:orientation="vertical">
 
     <xudeyang.bawie.com.oc.utils.TitleBar
         android:id="@+id/else_login_title"
@@ -65,16 +64,16 @@
         android:background="@drawable/login_background"
         android:text="登录"
         android:textColor="#ffffff" />
+
     <TextView
         android:id="@+id/forget_pwd_login"
-        android:layout_marginTop="@dimen/dp_5"
         android:layout_width="@dimen/dp_200"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="忘记密码"
-        android:textColor="#ffffff"
+        android:layout_marginTop="@dimen/dp_5"
         android:gravity="right"
-        />
+        android:text="忘记密码"
+        android:textColor="#ffffff" />
 
     <TextView
         android:id="@+id/visitors_login"

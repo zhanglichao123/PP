@@ -28,7 +28,7 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
-        android:name=".utils.MyApp"
+        android:name=".login.MyApp"
         android:allowBackup="true"
         tools:replace="android:name"
         android:icon="@mipmap/ic_launcher"
@@ -36,18 +36,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.activity.MainActivity" >
+        <activity android:name=".view.activity.MainActivity" />
+
+        <activity
+            android:name=".view.activity.SplashActivity"
+            android:theme="@style/SplashTheme" >
+
+        </activity>
+        <activity android:name=".view.activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".view.activity.SplashActivity"
-            android:theme="@style/SplashTheme" />
-        <activity android:name=".view.activity.LoginActivity">
-
         </activity>
         <activity android:name=".login.ElseLoginActivity" />
         <activity android:name=".login.RegisterActivity" />

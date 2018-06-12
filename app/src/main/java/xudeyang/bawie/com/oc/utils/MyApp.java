@@ -20,7 +20,7 @@ public class MyApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        MobSDK.init(this);
+
         Hawk.init(this).build();
         //换皮肤
         SkinCompatManager.withoutActivity(this)                         // Basic Widget support

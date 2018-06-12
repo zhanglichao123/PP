@@ -1,5 +1,6 @@
 package xudeyang.bawie.com.oc.view.recommend.hot.hotadapter;
 
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -11,7 +12,9 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -32,6 +35,7 @@ public class HotMyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     private boolean ao = false;
     private boolean co = false;
     private boolean oo = false;
+    private PopupWindow popupWindow;
     public HotMyAdapter(Context context, List<RecHotBean.DataBean> list) {
         this.context = context;
         this.list = list;

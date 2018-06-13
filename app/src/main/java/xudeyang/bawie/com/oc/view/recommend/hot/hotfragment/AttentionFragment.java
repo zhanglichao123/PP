@@ -39,7 +39,7 @@ public class AttentionFragment extends Fragment {
     }
 
     private void intnight() {
-        Flowable<RecHotBean> rechots = RetrofitUtil.getInstance().rechot("F8EB129296C90580807D0C6D9FD9B7F7", "1");
+        Flowable<RecHotBean> rechots = RetrofitUtil.getInstance().rechot("F8EB129296C90580807D0C6D9FD9B7F7", "10");
         rechots.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Consumer<RecHotBean>() {

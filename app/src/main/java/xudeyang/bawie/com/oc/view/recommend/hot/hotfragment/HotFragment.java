@@ -4,7 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,21 +15,15 @@ import com.youth.banner.Banner;
 import java.util.Arrays;
 import java.util.List;
 
-import io.reactivex.Flowable;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.functions.Consumer;
-import io.reactivex.schedulers.Schedulers;
 import xudeyang.bawie.com.oc.R;
-import xudeyang.bawie.com.oc.utils.RetrofitUtil;
 import xudeyang.bawie.com.oc.view.recommend.Img;
-import xudeyang.bawie.com.oc.view.recommend.hot.hotbean.RecHotBean;
 
 /**
  * Created by Carson_Ho on 16/7/22.
  */
 public class HotFragment extends Fragment {
     private View view;
-
+    private RecyclerView rlv;
     private List<String> mListImage, mListTitle;
     List<String> list = Arrays.asList(
             "https://www.zhaoapi.cn/images/quarter/ad1.png",
@@ -46,23 +41,30 @@ public class HotFragment extends Fragment {
         //网络请求
         intnight();
 
-
+        into();
 
         return view;
     }
 
+    private void into() {
+        rlv = view.findViewById(R.id.hot_rlv);
+        rlv.setLayoutManager(new LinearLayoutManager(getActivity()));
+    }
+
     private void intnight() {
-        Flowable<RecHotBean> rechots = RetrofitUtil.getInstance().rechot("F8EB129296C90580807D0C6D9FD9B7F7", "1");
-        rechots.subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Consumer<RecHotBean>() {
-                    @Override
-                    public void accept(RecHotBean recHotBean) throws Exception {
-                        List<RecHotBean.DataBean> list = recHotBean.getData();
-                        String msg = recHotBean.getMsg();
-                        Log.i("Hot",msg+"==========");
-                    }
-                });
+//        Flowable<RecHotBean> rechots = RetrofitUtil.getInstance().rechot("F8EB129296C90580807D0C6D9FD9B7F7","1");
+//        rechots.subscribeOn(Schedulers.io())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(new Consumer<RecHotBean>() {
+//                    @Override
+//                    public void accept(RecHotBean recHotBean) throws Exception {
+//                        List<RecHotBean.DataBean> list = recHotBean.getData();
+//                        HotMyAdapter hotMyAdapter = new HotMyAdapter(getContext(), list);
+//                        rlv.setAdapter(hotMyAdapter);
+//                        String msg = recHotBean.getMsg();
+//                        Log.i("Hot",msg+"==========");
+//                    }
+//                });
     }
 
     private void bannerClass() {
